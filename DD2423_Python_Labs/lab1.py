@@ -8,7 +8,7 @@ from Functions import *
 from gaussfft import gaussfft
 from fftwave import fftwave
 
-ex = 2.3
+ex = 3.2
 
 if ex==0:
 	print("That was a stupid idea")
@@ -100,8 +100,106 @@ if ex==1.8:
 	print()
 
 if ex==2.3:
-	test = discgaussfft(deltafcn(128, 128), 0.1)
-	# img = gaussfft(deltafcn(128, 128), t=0.1)
-	var = variance(img)
+	test = discgaussfft(deltafcn(128, 128), 10.0)
+	var_test = variance(test)
+	variances = [0.1, 0.3, 1.0, 10.]
+
+	for var in variances:
+		img = gaussfft(deltafcn(128, 128), t=var)
+		var_img = variance(img)
+		print('variance %f: '%(var))
+		print(var_img)
+
+	images = ["Images-npy/phonecalc128.npy", "Images-npy/few128.npy", "Images-npy/nallo128.npy"]
+	img = np.load(images[0])
+	test = gaussfft(img, 10.0)
 	print()
+
+
+if ex ==3.1:
+	office = np.load("Images-npy/office256.npy")
+
+	# f = plt.figure()
+	# a1 = f.add_subplot(1, 3, 1)
+	# showgrey(office, display=False)
+	# a1.title.set_text("Original image")
+
+	# noisy images
+	add = gaussnoise(office, 16)
+	sap = sapnoise(office, 0.1, 255)
+
+
+	# a2 = f.add_subplot(1, 3, 2)
+	# showgrey(add, display=False)
+	# a2.title.set_text("Gaussian filter")
+	#
+	# a3 = f.add_subplot(1, 3, 3)
+	# showgrey(sap, display=False)
+	# a3.title.set_text("Sap filter")
+
+	# plt.show()
+
+
+	g = plt.figure()
+	# Reduce noise with gaussian filter
+
+	gauss_sap = gaussfft(sap, t=3.1)
+	gauss_add = gaussfft(add, t=3.1)
+
+	g1 = g.add_subplot(3, 2, 1)
+	showgrey(gauss_sap, display=False)
+
+	g2= g.add_subplot(3, 2, 2)
+	showgrey(gauss_add, display=False)
+
+	# Reduce noise with median filter
+	med_sap = medfilt(sap, 3)
+	med_add = medfilt(add, 3)
+
+	g3 = g.add_subplot(3, 2, 3)
+	showgrey(med_sap, display=False)
+
+	g4 = g.add_subplot(3, 2, 4)
+	showgrey(med_add, display=False)
+
+	# Reduce noise with low_pass filtering
+	lp_sap = ideal(sap, cutoff=0.3)
+	lp_add = ideal(add, cutoff=0.3)
+
+	g5 = g.add_subplot(3, 2, 5)
+	showgrey(lp_sap, display=False)
+
+	g7 = g.add_subplot(3, 2, 6)
+	showgrey(lp_add, display=False)
+
+	plt.show()
+
+if ex == 3.2:
+	img = np.load("Images-npy/phonecalc256.npy")
+	smoothimg = img
+	N = 5
+
+	f = plt.figure()
+	f.subplots_adjust(wspace=0, hspace=0)
+
+	for i in range(N):
+		if i > 0:  # generate subsampled versions
+			img = rawsubsample(img)
+			# smoothimg = gaussfft(img, t=0.1)
+			smoothimg = ideal(img, cutoff=0.2)
+			# smoothimg = medfilt(img, 7)
+			smoothimg = rawsubsample(smoothimg)
+
+		f.add_subplot(2, N, i + 1)
+		showgrey(img, False)
+		f.add_subplot(2, N, i + N + 1)
+		showgrey(smoothimg, False)
+	plt.show()
+
+
+
+	print()
+
+
+
 print()
