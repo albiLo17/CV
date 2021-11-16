@@ -26,12 +26,12 @@ def gaussfft(pic, t):
 
     [h, w] = np.shape(pic)
     # [x, y] = np.meshgrid(np.linspace(0, 1 - 1 / w, w), np.linspace(0, 1 - 1 / h, h))
-    [x, y] = np.meshgrid(np.linspace(-(1 - 1 / w)/2, (1 - 1 / w)/2, w), np.linspace(-(1 - 1 / h)/2, (1 - 1 / h)/2, h))
+    [x, y] = np.meshgrid(np.linspace(-w/2,  w/2-1 , w), np.linspace(- h/2,  h/2 - 1, h))
     # [x, y] = np.meshgrid(np.linspace(-(w-1) / 2, (w-1) / 2, w), np.linspace(-(h-1) / 2, (h-1) / 2, h))
-    [x1, y1] = np.meshgrid(np.linspace(0, (1 - 1 / w), w), np.linspace(0, (1 - 1 / h), h))
+    # [x1, y1] = np.meshgrid(np.linspace(0, (1 - 1 / w), w), np.linspace(0, (1 - 1 / h), h))
 
     gauss = np.exp((-(x**2 + y**2) / float(2 * t)))/(2*t*np.pi)
-    gauss1 = np.exp((-(x1 ** 2 + y1 ** 2) / float(2 * t)))
+    # gauss1 = np.exp((-(x1 ** 2 + y1 ** 2) / float(2 * t)))
     a3 = f.add_subplot(2, 3, 3)
     showgrey(gauss, display=False)
     a3.title.set_text("Gauss filter")
@@ -39,18 +39,18 @@ def gaussfft(pic, t):
 
     # Fourier and shift
     G_hat = fftshift(fft2(gauss))
-    G_hat_1 = fftshift(fft2(gauss1))
+    # G_hat_1 = fftshift(fft2(gauss1))
 
     # Shift and fourier
     G_hat_2 = np.fft.fftshift(gauss)
-    G_hat_3 = np.fft.fftshift(gauss1)
+    # G_hat_3 = np.fft.fftshift(gauss1)
 
     # Fourier
-    G_hat_4 = fft2(gauss)       # TODO: this is the right one
-    G_hat_5 = fft2(gauss1)
+    G_hat_4 = fft2(fftshift(gauss))       # TODO: this is the right one
+    # G_hat_5 = fft2(gauss1)
 
     img = pfft * G_hat_4
-    # img = fftshift(pfft) * fftshift(G_hat_4)
+    # img = pfft * fftshift(G_hat_4)
     # img = pfft * G_hat_5
 
 
@@ -73,7 +73,7 @@ def gaussfft(pic, t):
 
     final = ifft2(img)
     a6 = f.add_subplot(2, 3, 6)
-    showgrey(final, display=False)
+    showgrey(np.real(final), display=False)
     a6.title.set_text("Final image")
 
     ############# TEST ###############
@@ -102,4 +102,4 @@ def gaussfft(pic, t):
 
     return np.real(final)
 
-gaussfft(deltafcn(128,128), 0.3)
+gaussfft(deltafcn(128,128), 10.0)
