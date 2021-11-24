@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e644a894-9d7e-45fb-95e8-321633ad87db" name="Changes" comment="Gaussian filter working">
+    <list default="true" id="e644a894-9d7e-45fb-95e8-321633ad87db" name="Changes" comment="Lab finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DD2423_Python_Labs/gaussfft.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD2423_Python_Labs/gaussfft.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DD2423_Python_Labs/lab1.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD2423_Python_Labs/lab1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DD2423_Python_Labs/lab2.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD2423_Python_Labs/lab2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +35,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.lab1">
+  <component name="RunManager" selected="Python.lab2">
     <configuration name="gaussfft" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CV" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,6 +78,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="lab2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CV" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DD2423_Python_Labs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DD2423_Python_Labs/lab2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CV" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,6 +122,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.lab2" />
         <item itemvalue="Python.lab1" />
         <item itemvalue="Python.gaussfft" />
       </list>
@@ -137,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637069432983</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Lab finished">
+      <created>1637072979530</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637072979530</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,52 +183,30 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Gaussian filter working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gaussian filter working" />
+    <MESSAGE value="Lab finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DD2423_Python_Labs/lab1.py</url>
-          <line>203</line>
+          <line>204</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DD2423_Python_Labs/lab1.py</url>
-          <line>99</line>
+          <url>file://$PROJECT_DIR$/DD2423_Python_Labs/lab2.py</url>
+          <line>305</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DD2423_Python_Labs/lab1.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DD2423_Python_Labs/lab1.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DD2423_Python_Labs/lab1.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DD2423_Python_Labs/lab1.py</url>
-          <line>88</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DD2423_Python_Labs/lab1.py</url>
-          <line>95</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DD2423_Python_Labs/lab1.py</url>
-          <line>199</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>
