@@ -12,7 +12,7 @@ from gaussfft import gaussfft
 # depending on what you are working on. It should be fairly easy for a TA
 # to go through all parts of your code though.
 
-ex = 6
+ex = 2
 
 
 def deltax(dir=1):
