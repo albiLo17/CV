@@ -3,7 +3,12 @@ from scipy.spatial import distance_matrix
 import matplotlib.pyplot as plt
 from Functions import *
 from gaussfft import gaussfft
+import os
+from tqdm import tqdm
 
+from PIL import Image
+
+ex = 2
 
 def kmeans_segm(image, K, L, seed = 42):
     """
@@ -19,8 +24,41 @@ def kmeans_segm(image, K, L, seed = 42):
     Output:
         segmentation: an integer image with cluster indices
         centers: an array with K cluster mean colors
-    """ 
-    return segmentation, centers
+    """
+
+    # Random initialization of the centers
+    np.random.seed(seed)
+    centers = np.random.randint(image.min(),image.max(),(K,3))
+    segmentation = np.zeros((image.shape[0], image.shape[1]))
+
+    # Compute all distances
+    distances = np.zeros((image.shape[0], image.shape[1], K))
+    for i in range(image.shape[0]):
+        distances[i] = scipy.spatial.distance_matrix(image[i], centers)
+
+    for iteration in tqdm(range(L)):
+        # Compute clusters for each point
+        for x in range(image.shape[0]):
+            for y in range(image.shape[1]):
+                cluster = np.argmax(distances[x][y])
+                segmentation[x][y] = int(cluster)
+
+        # Update centers
+        for k in range(K):
+            if k in segmentation:
+                indeces = np.where(segmentation == k)
+                num_points = len(indeces[0])
+                center_val = np.zeros((3))
+                for j in range(num_points):
+                    center_val += image[indeces[0][j]][indeces[1][j]]
+                centers[k] = center_val/ num_points
+
+        # Compute all distances
+        distances = np.zeros((image.shape[0], image.shape[1], K))
+        for i in range(image.shape[0]):
+            distances[i] = scipy.spatial.distance_matrix(image[i], centers)
+
+    return segmentation.astype(int), centers
 
 
 def mixture_prob(image, K, L, mask):
@@ -38,3 +76,9 @@ def mixture_prob(image, K, L, mask):
         prob: an image with probabilities per pixel
     """ 
     return prob
+
+# if ex==2:
+#     img = Image.open('Images-jpg/orange.jpg')
+#     I = np.asarray(img).astype(np.float32)
+#
+#     print()

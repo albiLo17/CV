@@ -333,8 +333,8 @@ def locmax8(A):
 def mean_segments(I, segm):
 	Ivec = np.reshape(I, (-1, 3))
 	idx = np.reshape(segm, (-1))
-	L = np.max(idx) + 1
-	centers = np.zeros((L, 3))
+	L = int(np.max(idx) + 1)
+	centers = np.zeros((int(L), 3))
 	h, _ = np.histogram(idx, L, (-0.5, L-0.5))
 	for l in range(L):
 		if h[l] > 0:

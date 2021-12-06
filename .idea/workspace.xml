@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e644a894-9d7e-45fb-95e8-321633ad87db" name="Changes" comment="Lab finished">
-      <change afterPath="$PROJECT_DIR$/DD2423_Python_Labs/lab3.py" afterDir="false" />
+    <list default="true" id="e644a894-9d7e-45fb-95e8-321633ad87db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DD2423_Python_Labs/Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD2423_Python_Labs/Functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DD2423_Python_Labs/kmeans_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD2423_Python_Labs/kmeans_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DD2423_Python_Labs/lab3.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD2423_Python_Labs/lab3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,14 +38,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../anisotropic_graphs/model.py" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Python.lab2">
+  <component name="RunManager" selected="Python.kmeans_example">
     <configuration name="gaussfft" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CV" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -58,6 +60,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DD2423_Python_Labs/gaussfft.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="kmeans_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CV" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DD2423_Python_Labs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DD2423_Python_Labs/kmeans_example.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,8 +180,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lab2" />
+        <item itemvalue="Python.kmeans_example" />
         <item itemvalue="Python.lab3" />
+        <item itemvalue="Python.lab2" />
         <item itemvalue="Python.lab1" />
         <item itemvalue="Python.gaussfft" />
       </list>
@@ -172,6 +197,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635257123281</updated>
       <workItem from="1638527987652" duration="3531000" />
+      <workItem from="1638784262677" duration="6677000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1636716600590</created>
@@ -201,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637072979530</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Lab 3 started">
+      <created>1638784553174</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638784553174</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +255,8 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Gaussian filter working" />
     <MESSAGE value="Lab finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab finished" />
+    <MESSAGE value="Lab 3 started" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab 3 started" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -239,8 +273,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DD2423_Python_Labs/lab3.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="10" />
+          <line>83</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DD2423_Python_Labs/kmeans_example.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -253,7 +292,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CV$lab2.coverage" NAME="lab2 Coverage Results" MODIFIED="1638531454294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DD2423_Python_Labs" />
-    <SUITE FILE_PATH="coverage/CV$lab3.coverage" NAME="lab3 Coverage Results" MODIFIED="1638531559942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DD2423_Python_Labs" />
+    <SUITE FILE_PATH="coverage/CV$kmeans_example.coverage" NAME="kmeans_example Coverage Results" MODIFIED="1638802123703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DD2423_Python_Labs" />
+    <SUITE FILE_PATH="coverage/CV$lab2.coverage" NAME="lab2 Coverage Results" MODIFIED="1638796452500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DD2423_Python_Labs" />
+    <SUITE FILE_PATH="coverage/CV$lab3.coverage" NAME="lab3 Coverage Results" MODIFIED="1638796473735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DD2423_Python_Labs" />
   </component>
 </project>
