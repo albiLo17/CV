@@ -5,10 +5,8 @@ from Functions import *
 from gaussfft import gaussfft
 import os
 from tqdm import tqdm
-
 from PIL import Image
 
-ex = 2
 
 def kmeans_segm(image, K, L, seed = 42):
     """
@@ -76,9 +74,3 @@ def mixture_prob(image, K, L, mask):
         prob: an image with probabilities per pixel
     """ 
     return prob
-
-# if ex==2:
-#     img = Image.open('Images-jpg/orange.jpg')
-#     I = np.asarray(img).astype(np.float32)
-#
-#     print()

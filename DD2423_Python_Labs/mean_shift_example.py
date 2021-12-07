@@ -3,7 +3,7 @@ import math
 import numpy as np
 from PIL import Image, ImageFilter
 import matplotlib.pyplot as plt
-from lab3_orig import kmeans_segm
+from lab3 import kmeans_segm
 from Functions import showgrey, mean_segments, overlay_bounds
 from scipy.ndimage.filters import gaussian_filter
 from scipy.spatial import distance_matrix
@@ -87,7 +87,7 @@ def mean_shift_example():
     scale_factor = 0.5         # image downscale factor
     image_sigma = 1.0          # image preblurring scale
     spatial_bandwidth = 10.0   # spatial bandwidth
-    colour_bandwidth = 20.0    # colour bandwidth
+    colour_bandwidth = 50.0    # colour bandwidth
     num_iterations = 40        # number of mean-shift iterations
     
     img = Image.open('Images-jpg/tiger1.jpg')
